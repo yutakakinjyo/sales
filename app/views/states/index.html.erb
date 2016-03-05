@@ -19,7 +19,7 @@
         <td><%= state.name %></td>
         <td><%= state.date %></td>
         <td><%= state.note %></td>
-	<td><%= state.customer_id %></td>
+	<td><%= state.customer.name %></td>
         <td><%= link_to 'Show', state %></td>
         <td><%= link_to 'Edit', edit_state_path(state) %></td>
         <td><%= link_to 'Destroy', state, method: :delete, data: { confirm: 'Are you sure?' } %></td>
