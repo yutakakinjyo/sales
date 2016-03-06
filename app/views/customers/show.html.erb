@@ -15,5 +15,12 @@
   <%= @customer.note %>
 </p>
 
+<p>
+<strong>Events</strong> <br>
+<% @customer.events.each do |event| %>
+  <%= event.name %> : <%= event.date %> <br>
+<% end %>
+</p>
+
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>
