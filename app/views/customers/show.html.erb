@@ -16,6 +16,13 @@
 </p>
 
 <p>
+<strong>States</strong> <br>
+<% @customer.states.each do |state| %>
+  <%= state.name %> : <%= state.date %> <br>
+<% end %>
+</p>
+
+<p>
 <strong>Events</strong> <br>
 <% @customer.events.each do |event| %>
   <%= event.name %> : <%= event.date %> <br>
