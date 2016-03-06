@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <h2> Customer Info  <%= link_to '✎', edit_customer_path(@customer) %> </h2>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @customer.name %>
 </p>
@@ -29,5 +33,4 @@
 <% end %>
 </p>
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+
