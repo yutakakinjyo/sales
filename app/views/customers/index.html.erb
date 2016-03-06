@@ -18,7 +18,7 @@
 	<% if customer.states.last.nil? %>
 	  <td></td>
 	<% elsif %>
-          <td><%= customer.states.last.name %></td>
+          <td><%= link_to customer.states.last.name, customer.states.last %></td>
 	<% end %>
         <td></td>
         <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
