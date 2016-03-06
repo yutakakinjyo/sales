@@ -1,30 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <h2><%= @customer.name %> <%= link_to '✎', edit_customer_path(@customer) %> </h2>
-</p>
+<h2><%= @customer.name %> <%= link_to "✎", edit_customer_path(@customer) %></h2> 
 
-<%= link_to  @customer.url, @customer.url %>
-
-<p>
-  <%= simple_format(@customer.note) %>
-</p>
-
+<%= fa_icon "link" %> <%= link_to  @customer.url, @customer.url %>
+<%= simple_format(@customer.note) %>
 
 <p>
-<strong>States</strong> <br>
-<% @customer.states.each do |state| %>
-  <%= link_to state.name, state %> : <%= state.date %> <br>
-<% end %>
+  <strong>States</strong> <%= link_fa_to "plus", "", new_state_path %> <br>
+    <% @customer.states.each do |state| %>
+      <li><%= link_to state.name, state %> : <%= state.date %> </li>
+    <% end %>
 </p>
 
 <p>
-<strong>Events</strong> <br>
-<% @customer.events.each do |event| %>
-  <%= link_to event.name, event %> : <%= event.date %> <br>
-<% end %>
+  <strong>Events</strong> <%= link_fa_to "plus", "", new_event_path %> <br>
+  <% @customer.events.each do |event| %>
+    <li><%= link_to event.name, event %> : <%= event.date %> </li>
+  <% end %>
 </p>
-
-<hr>
-
-<%= link_to 'New State', new_state_path %> | <%= link_to 'New Events', new_event_path %>
