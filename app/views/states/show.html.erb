@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Cutomer:</strong>
+  <%= link_to @state.customer.name, @state.customer %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @state.name %>
 </p>
