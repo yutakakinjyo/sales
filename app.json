@@ -1,6 +1,7 @@
 {
   "name": "sales",
   "scripts": {
+    "postdeploy": "rake db:migrate"
   },
   "addons": [
     "heroku-postgresql"
